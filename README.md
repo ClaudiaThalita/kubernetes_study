@@ -44,3 +44,38 @@ Este guia descreve os passos necessários para instalar o **Kind** (Kubernetes I
 
    ```bash
    kind --version
+
+
+# Instalação do kubectl
+
+### Passo 1: Instale o Kubectl
+
+1. Execute o comando abaixo para baixar a versão mais recente do kubectl para Linux:
+
+   ```bash
+   curl -LO "https://dl.k8s.io/release/v1.26.0/bin/linux/amd64/kubectl"
+
+### Passo 2: Torne o arquivo executável
+
+2. Torne o arquivo baixado executável:
+
+
+   ```bash
+   chmod +x ./kubectl
+
+### Passo 3: Mover o kubectl para o diretório bin
+
+3. Mova o binário para um diretório que esteja no seu caminho de execução ($PATH):
+
+
+   ```bash
+   sudo mv ./kubectl /usr/local/bin/kubectl
+
+### Passo 4: Verificar a instalação
+
+4. Verifique se o kubectl foi instalado corretamente executando:
+
+
+   ```bash
+   kubectl version --client
+
